@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz - TECH FLOW</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="home.html" title="Home"><i class="fas fa-home"></i></a>
+    <a href="team.html" title="Our Team"><i class="fas fa-users"></i></a>
+    <a href="timeline.html" title="Timeline"><i class="fas fa-clock"></i></a>
+    <a href="tech.html" title="Smart Water Tech"><i class="fas fa-microchip"></i></a>
+    <a href="interview.html" title="Interview Video"><i class="fas fa-video"></i></a>
+    <a href="quiz.html" title="Quiz"><i class="fas fa-question"></i></a>
+  </nav>
+
+  <section class="quiz-section">
+    <h2>Test Your Knowledge!</h2>
+    <p>Answer a few quick questions based on what you've learned.</p>
+
+    <div class="quiz-container">
+      <div class="question">
+        <h3>1. What percentage of Panama’s electricity comes from the Canal Watershed?</h3>
+        <ul>
+          <li><button onclick="checkAnswer(this, false)">45%</button></li>
+          <li><button onclick="checkAnswer(this, true)">67.2%</button></li>
+          <li><button onclick="checkAnswer(this, false)">82%</button></li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <h3>2. What is the main reason for the drop in water levels in recent years?</h3>
+        <ul>
+          <li><button onclick="checkAnswer(this, false)">Infrastructure problems</button></li>
+          <li><button onclick="checkAnswer(this, true)">Climate change and reduced rainfall</button></li>
+          <li><button onclick="checkAnswer(this, false)">Ship traffic</button></li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <h3>3. What is the name of the lake where the Recycling Tank System will be focused?</h3>
+        <ul>
+          <li><button onclick="checkAnswer(this, false)">Miraflores Lake</button></li>
+          <li><button onclick="checkAnswer(this, false)">Bayano Lake</button></li>
+          <li><button onclick="checkAnswer(this, true)">Gatun Lake</button></li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <h3>4. Which of the following is a goal of the Recycling Tank System?</h3>
+        <ul>
+          <li><button onclick="checkAnswer(this, false)">Increase ship size</button></li>
+          <li><button onclick="checkAnswer(this, false)">Replace hydroelectric dams</button></li>
+          <li><button onclick="checkAnswer(this, true)">Improve water reuse efficiency</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function checkAnswer(button, isCorrect) {
+      if (button.classList.contains('answered')) return;
+      button.classList.add('answered');
+      button.style.backgroundColor = isCorrect ? '#4CAF50' : '#F05C4C';
+    }
+  </script>
+
+    <!-- al final de tu quiz.html -->
+    <script src="quiz.js"></script>
+  </body>
+  </html>
+  
+
+</body>
+</html>
